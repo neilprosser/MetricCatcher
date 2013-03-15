@@ -27,12 +27,11 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.PropertyConfigurator;
-import org.codehaus.jackson.map.util.LRUMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.addthis.metrics.reporter.config.ReporterConfig;
-
+import com.fasterxml.jackson.databind.util.LRUMap;
 import com.yammer.metrics.core.Metric;
 import com.yammer.metrics.reporting.GangliaReporter;
 import com.yammer.metrics.reporting.GraphiteReporter;

@@ -15,8 +15,7 @@
  */
 package com.clearspring.metriccatcher;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -25,13 +24,19 @@ import java.net.InetAddress;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import com.yammer.metrics.core.*;
-import org.codehaus.jackson.map.util.LRUMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.fasterxml.jackson.databind.util.LRUMap;
 import com.yammer.metrics.Metrics;
+import com.yammer.metrics.core.Counter;
+import com.yammer.metrics.core.Gauge;
+import com.yammer.metrics.core.Histogram;
+import com.yammer.metrics.core.Meter;
+import com.yammer.metrics.core.Metric;
+import com.yammer.metrics.core.MetricName;
+import com.yammer.metrics.core.Timer;
 
 public class MetricCatcherTest {
     MetricCatcher metricCatcher;
