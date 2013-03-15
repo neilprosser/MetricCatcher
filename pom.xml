@@ -69,7 +69,11 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+<<<<<<< HEAD
             <version>${slf4j.version}</version>
+=======
+            <version>1.7.3</version>
+>>>>>>> Update slf4j
         </dependency>
     </dependencies>
 
