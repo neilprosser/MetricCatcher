@@ -89,6 +89,11 @@ public class MetricCatcher extends Thread {
 
                 // Parse all of the metrics in the message
                 for (JSONMetric jsonMetric : jsonMetrics) {
+                    if (jsonMetric.getName() == null) {
+                        logger.info("Skipping metric with no name");
+                        continue;
+                    }
+                    
                     if (!metricCache.containsKey(jsonMetric.getName())) {
                         logger.info("Creating new " + jsonMetric.getType().name() + " metric for '" + jsonMetric.getName() + "'");
                         Metric newMetric = createMetric(jsonMetric);
