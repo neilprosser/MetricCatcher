@@ -34,7 +34,6 @@ import com.addthis.metrics.reporter.config.ReporterConfig;
 import com.fasterxml.jackson.databind.util.LRUMap;
 import com.yammer.metrics.core.Metric;
 import com.yammer.metrics.reporting.GangliaReporter;
-import com.yammer.metrics.reporting.GraphiteReporter;
 
 public class Loader {
     private static final Logger logger = LoggerFactory.getLogger(Loader.class);
