@@ -99,6 +99,7 @@ public class MetricCatcherTest {
         assertEquals(1, metric.count());
     }
 
+    @SuppressWarnings("rawtypes")
     @Test
     public void testUpdateMetric_UpdatesGauge() {
         JSONMetric gaugeJsonMetric = new JSONMetric();
